@@ -1,0 +1,762 @@
+/*CSS completed by Kevin Van Dijk
+Modified from my portfolio website
+and GEOM101 Project Semester 1.
+2023-04-05
+*/
+* {									
+	box-sizing: border-box;			/* Width and height calculations will include padding and borders */
+	margin: 0;						      /* Overrides defaults and sets the margin of the entire page to 0 */
+	padding: 0;						      /* Overrides defaults and sets the padding of the entire page to 0 */
+}
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, sans-serif; 
+}
+.main {
+  flex: 1;
+}
+
+/*Top Botton Style Section Start*/
+#TopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: #0B0909;
+  color: #e0ebeb;
+  cursor: crosshair;
+  padding: 10px;
+  border-radius: 40px;
+}
+#TopBtn:hover {
+  background-color: #44444C;
+}
+/*Top Botton Style Section End*/
+
+
+/*NavBar Section Start*/
+.navbar {
+  background-color: whitesmoke; 
+  color:#0B0909;
+  display:flex;
+  overflow: hidden;
+  justify-content: space-between; 
+  align-items: center;
+}
+.navlist {
+  list-style: none;
+  float: right;
+  color: #0B0909; 
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 17px;
+  margin-right: 2%;
+  line-height: 24px;
+}
+.navlist .list_item {
+  display: inline-block;
+  padding: 20px 16px;
+}
+.navbar a {
+  color:#0B0909;  
+  text-decoration: none;
+  font-size: 14px;
+}
+.navbar a:hover {
+  color:  #0B0909; 
+  transition: all 0.5s;
+  text-decoration:none;
+}
+.navlist a.active {
+  color:  #0B0909; 
+  text-decoration: underline;
+  font-weight: bold;
+}
+.navbar .CompanyLogo {
+  max-height: 70px;
+  display: inline-block; 
+  vertical-align: middle; 
+}
+.navbar .CompanyName {
+  color: #44444C; 
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight:normal;
+  display: inline-block; 
+  padding: 5px 20px 10px 20px; 
+  vertical-align: middle; 
+}
+.menu_bar {
+  width: 22px;
+  height: 3.5px;
+  background-color: #44444C; 
+  margin-bottom: 4.5px;
+}
+.menuicon { /*Hide icon until @media mod kicks in aka smaller than 960px screen*/
+  display: none;
+}
+/*jQuery Drop Menu NavBar*/
+ul.sub_drop {
+  position: absolute;
+  width: auto;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: none;
+  margin: 0;
+  padding-top: 5px;
+  z-index: 1;
+}
+ul.sub_drop li:first-child {
+  margin-top: 0;
+}
+ul.sub_drop li > a:hover {
+  background-color: darkslategrey;
+  color: #fff;
+}
+ul.sub_drop li > a.StoryMaps:hover {
+  background-color: darkslategrey;
+  color: #fff;
+}
+ul.sub_drop li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+ul.sub_drop li a.StoryMaps {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+ul.sub_drop li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+/* Add a dropdown arrow to the Projects menu item */
+ul.navbar li:nth-child(3)::after {
+  content: "\25BC"; /*down-pointing triangle*/
+  display: inline-block;
+  margin-left: 5px;
+  color: #e0ebeb;
+}
+/* Show the dropdown list when hovering over the parent menu item */
+ul.navbar li:hover > ul.sub_drop {
+  display: block;
+}
+
+
+/*End NavBar Section*/
+
+
+
+/*Footer Section Start*/
+footer {
+	left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: #0B0909;
+  text-align: center;
+  padding: 40px;
+}
+.footer a {
+  padding-top: 4%;
+  color: #0B0909;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 22px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.footer a:hover {
+  color:  #0B0909; 
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+/*End Footer Section*/
+
+
+
+/*Header Text Section*/
+h1, h2, h3, h4, h5, h6 { /* Default for all hn */
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, sans-serif; /* Several fonts should be listed for fallback */ 
+}
+h1 { /* Main Page Heading */
+  padding-top: 50px; 
+	margin-left: 5px;
+	font-size: 55pt;
+}
+h2 { /* Heading for non-main pages */
+	font-size: 50px;
+	margin-left: 30px;
+  color: #0B0909;
+  padding-left: 8%; /* to align with page contents */
+  letter-spacing: -0.5mm;
+}
+h3 { /* Supporting Heading */
+	color: #0B0909; 
+  font-size: 35px;
+	margin-top: 10px;
+  margin-bottom: 20px;
+}
+h4 { /* Supporting Heading - Centered */
+	color: #0B0909; 
+  font-size: 35px;
+	text-align: center;
+	margin-left: 35px;
+}
+h5 { /* Inner Heading */
+  color: #0B0909;
+  font-size: 30px;
+	margin: 18px;
+  padding-bottom: 1%;
+  padding-top: 1%; 
+}
+h6 { /* Heading - Main page Bold Paragraph Titles*/
+  color: #0B0909;
+  font-size: 40px;
+  letter-spacing: -0.7mm;
+  margin: 40px;
+  text-align:center; /* align text with the main header text */
+}
+/*End Header Text Section*/
+
+
+
+
+/*Header Image Section*/
+.header-image {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/UrbanForest_SophieNitoUnsplash.jpg");
+  height: 100vh; /* changed from min-height to height */
+  background-repeat: no-repeat;
+  position: relative;
+}
+.header-image-text-wrapper {
+  background-image: url("images/Stars_MattGrossUnsplash.jpg"); /* Added black background */
+  padding-top: 20px; /* Added padding to create space around the text */
+  padding-bottom: 100px;
+}
+.header-image-text {
+  text-align: center;
+  color: whitesmoke;
+  padding-top: 10px; 
+}
+.header-image-subtitle {
+  font-size: 30px;
+  text-align: center;
+  color: whitesmoke; 
+}
+/*End Header Image Section*/
+
+
+/* Homepage Subtext Start */
+.hometext{
+	font-size: 20px; 
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, sans-serif; 
+	color: #0B0909;
+	line-height: 155%; /* add spaces between rows of text for readability */
+  text-align:center;
+  padding-bottom: 3%;
+}
+/* Homepage Subtext End */
+
+
+/*This section is the three images that link to other pages on home page*/
+.project-container:after,
+.project-container:before,
+.project-row-padding:after,
+.project-row-padding:before {
+  content: "";
+  display: table;
+  clear: both; /* Clearing the style before and after the container */
+}
+.project-container {
+  padding: 0.16px 16px;
+  margin-bottom: 16px;
+}
+.project-row-padding {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 8px;
+}
+.project-fourth {
+  /* Creating three floating project images */
+  float: left;
+  width: 25%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+/*Boxes on image links main page*/
+.project-display-container {
+  position: relative;
+  
+}
+.project-display-textbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1; /* Brings the black box to the front, so that its opacity is not lowered when the user hovers over the image */
+  color: #D6D6D6;
+  background-color: #0B0909;
+  padding: 8px 16px;
+}
+.project-image img {
+  width: 100%;
+  border: 2px solid #000; /* Adding black border */
+}
+.project-image:hover {
+  /* When the user hovers over the project image, the opacity is lowered */
+  opacity: 0.7;
+}
+/*End of linked images section on home page*/
+
+/*Alternate Pages CSS Start*/
+.topbox{
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	text-align: center;
+	font-size: 20px; 
+	font-family: Verdana, sans-serif;
+	color: #44444C;
+	background-color: #D6D6D6; 
+}
+.topbox2{
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	/* color: none;
+	background-color: none;  */
+}
+.sectionbox{
+	background-color: #EBF5EE; /* background colour will be changed when colours are chosen */
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-bottom: 5%;
+	padding-top: 5%;	
+}
+.sectionboxone{
+	display: flex; /* make it so the text boxes can stack if screen is smaller */
+	flex-direction: row;
+	background-color: white;
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-bottom: 5%;
+	padding-top: 1%;	
+}
+.sectionboxtwo{
+	display: flex;
+	flex-direction: row;
+	background-color: #D6D6D6; /* background colour will be changed when colours are chosen */
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-bottom: 1%;
+	padding-top: 0.5%;	
+}
+/* for other pages the quote box will be swapped for images that will be contained in the section boxes */
+.quotebox{
+	padding: 3px; /* quote box has different padding levels to make it left justified from center */
+	flex: 25%;
+	font-size: 25px; 
+	font-style: italic;
+	font-family: Verdana, sans-serif;
+	color: #18314F;
+	font-style: italic;
+	line-height: 155%;
+} 
+/* Paragraph/div formmating for the values page */
+.paragraphbox{
+	padding: 8px;
+	flex: 75%;
+	font-size: 20px; 
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, sans-serif; 
+	color: #44444C;
+	line-height: 155%; /* add spaces between rows of text for readability */
+}
+/* Assessment pages */
+.row {
+  margin: 2rem 0;
+}
+.mainbox {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+.padpast {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.sectionboxtwoteam {
+  flex: 1;
+  margin-right: 1rem;
+}
+.quoteboxteam {
+  text-align: center;
+}
+.pastprojects {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.paragraphboxteam {
+  text-align: justify;
+}
+.FireMap {
+  margin-top: 1rem;
+}
+.FireMapSourceLink {
+  color: blue;
+  text-decoration: underline;
+}
+.Firebox {
+  border-top: 1px solid #333;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.FireMapSource1 {
+  font-weight: bold;
+}
+.SubP_Spacing {
+  padding-top: 2%;
+}
+
+/*Assessment Pages CSS End*/
+
+
+/*Media Screen Start*/
+/* Responsive design for h1, .grid-container - shifts to a stacking arrangement when screen size passes limit */
+@media screen and (max-width: 1150px) {
+  .h1text {
+    font-size: 8vw; /* font unit vw for responsive design */
+  }
+  .grid-container {
+    grid-auto-flow: row; /* change orientation of the boxes */
+  }
+  .grid-container2 {
+    grid-auto-flow: row; /* change orientation of the boxes */
+    gap: 20px;
+  }
+}
+/* Responsive design for h2 */
+@media screen and (max-width: 1000px) {
+  .h2text {
+    margin-left: 30px;
+    padding: 0%;
+  }
+}
+
+@media all and (max-width:960px) {
+  .navbar {
+    flex-direction: column;
+    position: relative;
+    transition: ease-in-out 0.4s;
+  }
+  .navbar a.CompanyName {
+    flex-direction: column;
+    position: relative;
+    transition: ease-in-out 0.4s;
+    font-size: x-small;
+  }
+  ul.sub_drop {
+    position:sticky;
+    width:fit-content;
+    background-color: #44444C;
+    display: none;
+    margin-top: 25px;
+    margin-left: auto; /*Auto adjust drop list to center when screen size changes*/
+    margin-right: auto;
+  }
+  ul.sub_drop li:first-child{ /*Sets position of first drop down link*/
+    margin-top: -10px;
+  }
+  
+  ul.sub_drop li > a:hover {
+   border: none;
+   color: #5dacbd;
+   transition: 0.5s;
+  }
+  ul.sub_drop li a {
+    text-decoration: none;
+    display:flex;
+    text-align: center;
+    color: #e0ebeb;
+    font-size: small;
+    padding-left: 20%;
+    padding-right: 20%;
+   }
+  ul.sub_drop li a.StoryMaps {
+    text-decoration: none;
+    display:flex;
+    text-align: center;
+    color: #e0ebeb;
+    font-size: small;
+    padding-left: 31%;
+    padding-right: 31%;
+   }
+  .menuicon {
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  } 
+  .navlist {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+    display: none;/*Hide nav list items*/
+  }
+  .navlist .list_item {/*Want to add transition for menu drop down*/
+    display: block;
+    padding: 8px 4px;
+    text-align: center;
+    padding-top:8px;
+  }
+  .navbar .GeomSolutions {/*Align name/logo left*/
+    width: 100%;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+  .active { /*Active class for JavaScript to bring our list back once icon is clicked*/
+    display: block
+  }
+  .header-image-subtitle {
+    font-size:medium;
+  }
+  .project-display-textbox {
+    display: none;
+  }
+  .project-fourth {
+    width: 33.333%;
+  }
+  .project-display-textbox {
+    padding: 6px 12px;
+  }
+}
+
+@media (min-width:801px) {    /* Adding responsive design to the images */
+  .project-fourth {
+    width:25%;
+  }
+}
+/* Responsive design for headings and their margins for smaller screen size */
+@media screen and (max-width: 600px) {
+  .row {
+	  margin-left: 40px;
+    margin-right: 40px;
+  }
+  .h2text {
+	  font-size: 40px;  
+	  margin-top: 40px;
+  }
+  .h3text {
+    font-size: 30px;
+	  margin: 30px;
+  }
+  .h4text {
+    font-size: 30px;
+    margin: 30px;
+  }
+  .h6text {
+    font-size: 30px;
+  }
+}
+
+/*Media Screen End*/
+
+/*Solutions page Bootstrap table*/
+.table-custom {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+.table-custom thead th {
+  background-color: #3a3f48;
+  color: #ffffff;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+/* .table-custom tbody tr:hover {
+  background-color: #5a5959; */
+/* } */
+.table-custom tbody td {
+  background-color: #f4f4f4;
+  color: #333333;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.table-custom tbody th {
+  background-color: #28a745;
+  color: #ffffff;
+}
+.list-td {
+  padding: 0;
+}
+.list-td ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-td li {
+  padding-left: 1.2em;
+  position: relative;
+}
+.list-td li:before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+}
+.table-custom td.list-td {
+  vertical-align: top;
+}
+/*End solutions page Bootstrap table*/
+
+/*Media Screen Design Solutions page Bootstrap table*/
+/* Extra Small Devices (portrait phones) */
+.table-custom {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+.table-custom thead th {
+  background-color: #3a3f48;
+  color: #ffffff;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.table-custom tbody td {
+  background-color: #f4f4f4;
+  color: #333333;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.table-custom tbody th {
+  background-color: #28a745;
+  color: #ffffff;
+}
+.list-td {
+  padding: 0;
+}
+.list-td ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-td li {
+  padding-left: 1.2em;
+  position: relative;
+}
+.list-td li:before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+}
+.table-custom td.list-td {
+  vertical-align: top;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .table-custom {
+    font-size: 0.8rem;
+  }
+  .table-custom thead th {
+    padding: 0.75rem 1rem;
+  }
+  .table-custom tbody td {
+    padding: 0.75rem 1rem;
+  }
+  .list-td li {
+    padding-left: 1.5em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .table-custom {
+    font-size: 0.9rem;
+  }
+  .table-custom thead th {
+    padding: 0.75rem 1.5rem;
+  }
+  .table-custom tbody td {
+    padding: 0.75rem 1.5rem;
+  }
+  .list-td li {
+    padding-left: 1.8em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .table-custom {
+    font-size: 1rem;
+  }
+  .table-custom thead th {
+    padding: 1rem 2rem;
+  }
+  .table-custom tbody td {
+    padding: 1rem 2rem;
+  }
+  .list-td li {
+    padding-left: 2em;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .table-custom {
+    font-size: 1.1rem;
+  }
+  .table-custom thead th {
+    padding: 1rem 2.5rem;
+  }
+  .table-custom tbody td {
+    padding: 1rem 2.5rem;
+  }
+  .list-td li {
+    padding-left: 2.5em;
+  }
+}
+/*END Media Screen Design Solutions page Bootstrap table*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
