@@ -42,7 +42,19 @@ body, html {
   max-width: 100%;
   height: auto;
 }
+.HomepageImage_1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 2%;
+}
 
+.emphasis {
+  font-weight: bold;
+  /* font-style: italic; */
+}
 
 
 .main {
@@ -322,11 +334,12 @@ h6 { /* Heading - Main page Bold Paragraph Titles*/
 
 /* Homepage Subtext Start */
 .hometext{
-	font-size: 20px; 
+	font-size: 25px; 
 	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, sans-serif; 
 	color: #0B0909;
 	line-height: 155%; /* add spaces between rows of text for readability */
   text-align:center;
+  padding: 0 10%; /* 10% padding to the left and right */
   padding-bottom: 3%;
 }
 /* Homepage Subtext End */
