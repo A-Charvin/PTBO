@@ -32,9 +32,9 @@ body, html {
 
 .header-image-text {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 50%, transparent 99%);
-  text-shadow: -1px 0 rgba(211, 211, 211, 0.5), 0 1px rgba(211, 211, 211, 0.5), 1px 0 rgba(211, 211, 211, 0.5), 0 -1px rgba(211, 211, 211, 0.5);
-  color: black; /* text color */
-  padding-bottom: 15%; /* adjust as needed */
+  text-shadow: -1px 0 rgba(211, 211, 211, 0.5), 0 1px rgba(211, 211, 211, 0.938), 1px 0 rgba(211, 211, 211, 0.856), 0 -1px rgba(211, 211, 211, 0.836);
+  color: black; 
+  padding-bottom: 15%; 
 }
 
 .HomepageImage {
