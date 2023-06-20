@@ -132,6 +132,175 @@
 </div>
 
 
+<div class = "topbox">
+</div>
+<div class="row">
+</div>  
+<div class = "mainbox"> 
+<div class = "sectionboxone">
+<div class = "paragraphbox"> 
+<h5 class="h5text">Methodology</h5>
+<div  class = "quoteboxteam"> 
+  <img class="pastprojects" src="images/Canopy_DetailedWF.png" alt="Area51">
+</div>
+
+<div class="subtitles2"><p><em><strong>Canopy Cover</strong></em></p></div>
+<!-- <div class="subtitles2"><p><em><strong>Manage & Edit Data from Desktop</strong></em></p></div> -->
+<div class="Slinkdiv2">
+  <a class="SLink2" href="images/Kvandijk_GEOM75CulmAssignment_Area51.pdf" class="FireMapSourceLink"> </a>
+</div>  
+<div class="FMap"></div> 
+<p >Using high-resolution aerial imagery and LiDAR data, we crafted a precise canopy cover estimate for Peterborough. The LiDAR data was segmented into mosaic areas to expedite processing, and used to create a Canopy Height Model (CHM) for vegetation above 5m. An inventory of tree locations filled in data on smaller trees, with a 1.5m buffer representing their canopy spread.
+
+    Key steps in the LiDAR extraction process included creating LiDAR dataset layers, converting these to raster format, isolating the CHM, and reclassifying canopy height values into a binary format. The "Focal Statistics" tool smoothed the CHM, yielding an accurate representation of canopy heights.
+    
+    Finally, our canopy cover estimate was enhanced with intersected attributes relating to land ownership, ward data, and zoning types, providing decision-useful details for each canopy layer.
+</p>
+<div class="FMap"></div>    
+</div>
+</div>
+</div>
+
+
+<div class = "topbox">
+</div>
+<div class="row">
+</div>  
+<div class = "mainbox"> 
+<div class = "sectionboxone">
+<div class = "paragraphbox"> 
+<!-- <h5 class="h5text">Methodology</h5> -->
+<div  class = "quoteboxteam"> 
+  <img class="pastprojects" src="images/PPAMeth.png" alt="Area51">
+</div>
+
+<div class="subtitles2"><p><em><strong>Potential Planting Area's</strong></em></p></div>
+<!-- <div class="subtitles2"><p><em><strong>Manage & Edit Data from Desktop</strong></em></p></div> -->
+<div class="Slinkdiv2">
+  <a class="SLink2" href="images/Kvandijk_GEOM75CulmAssignment_Area51.pdf" class="FireMapSourceLink"> </a>
+</div>  
+<div class="FMap"></div> 
+<p >The Potential Planting Areas (PPAs) were identified using specific tree planting criteria from the City of Peterborough. Several layers were analyzed and conflicts were removed via an iterative process of buffering and erasing, resulting in a refined grass layer. This layer was divided into 3x5 meter grids using the "Create Fishnet" tool in ArcGIS Pro, implemented ward by ward due to size constraints. Areas less than 15m² and unsuitable zones were removed manually. The final PPA layer was supplemented with XY coordinates, land ownership attributes, and priority rankings, creating a comprehensive ward-by-ward map for future tree planting initiatives.
+</p>
+<div class="FMap"></div>    
+</div>
+</div>
+</div>
+
+
+<div class = "topbox">
+</div>
+<div class="row">
+</div>  
+<div class = "mainbox"> 
+<div class = "sectionboxone">
+<div class = "paragraphbox"> 
+<!-- <h5 class="h5text">Methodology</h5> -->
+<div  class = "quoteboxteam"> 
+  <img class="pastprojects" src="images/MCDAMEtth.png" alt="Area51">
+</div>
+
+<div class="subtitles2"><p><em><strong>Prioritizing Potential Planting Area's</strong></em></p></div>
+<!-- <div class="subtitles2"><p><em><strong>Manage & Edit Data from Desktop</strong></em></p></div> -->
+<div class="Slinkdiv2">
+  <a class="SLink2" href="images/Kvandijk_GEOM75CulmAssignment_Area51.pdf" class="FireMapSourceLink"> </a>
+</div>  
+<div class="FMap"></div> 
+<p >Five criteria were selected for a multi-criteria decision analysis to determine priority planting zones: heat island effect, low social equity, maximum achievable canopy, low existing canopy cover, and land ownership. Data were acquired from external sources, city provided layers, and through LiDAR-based estimates.
+
+    Pre-processing involved extracting, calculating, resampling, and reclassifying data into a scale of 1-5 for heat island effect, low social equity, and land ownership. For the canopy coverage, the square meter coverage within each subward was obtained and reclassified. The maximum achievable canopy was calculated by adding the existing canopy percent coverage with the percent coverage of potential planting areas.
+    
+    The criteria were then weighted based on values provided by the client. Finally, the reclassified raster layers were processed through the Weighted Overlay tool in ArcGIS Pro to produce the final weighted layer.
+</p>
+<div class="FMap"></div>    
+</div>
+</div>
+</div>
+
+
+<div class = "topbox">
+</div>
+<div class="row">
+</div>  
+<div class = "mainbox"> 
+<div class = "sectionboxone">
+<div class = "paragraphbox"> 
+<!-- <h5 class="h5text">Methodology</h5> -->
+<div  class = "quoteboxteam"> 
+  <img class="pastprojects" src="images/TreePlantingTimeline.png" alt="Area51">
+</div>
+<div class="subtitles2"><p><em><strong>Tree Planting Timeline</strong></em></p></div>
+<!-- <div class="subtitles2"><p><em><strong>Manage & Edit Data from Desktop</strong></em></p></div> -->
+<div class="Slinkdiv2">
+  <a class="SLink2" href="images/Kvandijk_GEOM75CulmAssignment_Area51.pdf" class="FireMapSourceLink"> </a>
+</div>  
+<div class="FMap"></div> 
+<p >The tree planting timeline was designed by estimating the number of trees to be planted in potential planting areas (PPAs), and separating them based on land ownership. Smaller areas around 15 m² were assigned one tree, while areas around 30 m² were assigned two trees. For spaces larger than 30 m² but less than 0.5 hectares, the total area divided by 55 m² (reflecting the average canopy spread in Peterborough) determined the number of trees. For the largest areas, those above 0.5 hectares, tree assignment was based on their total area divided by 10 m², allowing for higher density planting. The sum of these tree allocations was then divided over the project's 28-year timeline, providing an annual estimate to fully utilize potential planting areas by 2051. 
+</p>
+<div class="FMap"></div>    
+</div>
+</div>
+</div>
+
+
+<div class = "topbox">
+</div>
+<div class="row">
+</div>  
+<div class = "mainbox"> 
+<div class = "sectionboxone">
+<div class = "paragraphbox"> 
+<!-- <h5 class="h5text">Methodology</h5> -->
+<div  class = "quoteboxteam"> 
+  <img class="pastprojects" src="images/WebMeth.png" alt="Area51">
+</div>
+<div class="subtitles2"><p><em><strong>Web Application</strong></em></p></div>
+<!-- <div class="subtitles2"><p><em><strong>Manage & Edit Data from Desktop</strong></em></p></div> -->
+<div class="Slinkdiv2">
+  <a class="SLink2" href="images/Kvandijk_GEOM75CulmAssignment_Area51.pdf" class="FireMapSourceLink"> </a>
+</div>  
+<div class="FMap"></div> 
+<p >The methodology outlines the development of a web application for tree planting data collection and management. It uses ESRI's Field Maps Designer tool for creating the application, including tree inventory and potential planting area (PPA) layers. Customizations for data collection, visibility, geofencing, and offline capabilities were enabled based on project requirements. Another web application was designed using Experience Builder and FieldMaps, offering a user-friendly interface for displaying project aspects. It features a comprehensive Dashboard page, a PPA visualization section, a Multi-Criteria Decision Analysis (MCDA) section for planting decision outcomes, an Edit section for client-exclusive access, and a field maps section with a link to a mobile app.
+</p>
+<div class="FMap"></div>    
+</div>
+</div>
+</div>
+
+
+<div class = "topbox">
+</div>
+<div class="row">
+</div>  
+<div class = "mainbox"> 
+<div class = "sectionboxone">
+<div class = "paragraphbox"> 
+<!-- <h5 class="h5text">Methodology</h5> -->
+<!-- <div  class = "quoteboxteam"> 
+  <img class="pastprojects" src="images/WebMeth.png" alt="Area51">
+</div> -->
+<div class="subtitles2"><p><em><strong>Physical and Digital Infographics</strong></em></p></div>
+<!-- <div class="subtitles2"><p><em><strong>Manage & Edit Data from Desktop</strong></em></p></div> -->
+<div class="Slinkdiv2">
+  <a class="SLink2" href="images/Kvandijk_GEOM75CulmAssignment_Area51.pdf" class="FireMapSourceLink"> </a>
+</div>  
+<div class="FMap"></div> 
+<p >Creation of an infographic, a large wall map, and an interactive web application, aiming to present statistical data and cartographic outputs visually and accessibly.
+
+    For the infographic, data was gathered and a base map was created using ArcGIS Pro. The map was styled and exported as an SVG file for further enhancement in Adobe Illustrator, where text, icons, and illustrations were added. The infographic was then reviewed, finalized, and exported in suitable formats for sharing.
+    
+    The large wall map and Experience Builder application were the main cartographic outputs. The map was created with a 1:14,000 scale, showing the Canopy Cover Estimate and Potential Planting Areas. It incorporated layers like roads, hydrography, railway, buildings, and landcover from the City of Peterborough's open data portal. Cartographic design principles guided annotation creation and placement, ensuring legibility, contrast, and hierarchy.
+    
+    The Experience Builder application included web maps made with ArcGIS Online, featuring tools for easy navigation and interaction. The web maps maintained clear hierarchies of information, visual clarity, scalability, and mobile compatibility.
+    
+    In both the map and the application, design decisions were made carefully to provide accessible, visually appealing, and information-rich outputs.
+</p>
+<div class="FMap"></div>    
+</div>
+</div>
+</div>
+
+
 
 
 
