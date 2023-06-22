@@ -68,7 +68,7 @@ body, html {
 
   .about-us {
     width: 80%;
-    max-width: 900px;
+    max-width: inherit;
     margin-left: 3%;
     margin-right: 5%;
   }
